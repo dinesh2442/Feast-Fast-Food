@@ -155,7 +155,7 @@ Developed by: **DINESH T** 💡 Tools used: PyCharm, PostgreSQL, Django, Bootstr
 
 🔗 [GitHub](https://github.com/dinesh2442) 
 
-🔗 [LinkedIn](www.linkedin.com/in/dinesh2442) 
+🔗 [LinkedIn](https://www.linkedin.com/in/dinesh2442/) 
 
 🔗 [Instagram](https://www.instagram.com/silent_killer_2442/#)
 
