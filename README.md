@@ -48,12 +48,12 @@ Feast Fast Food is a full-stack **Django web application** that allows users to 
 ## 📦 Python Packages Used
 
 asgiref==3.9.1 
-Django==5.2.6 
-django-admin-sortable2==2.2.8 
-pillow==11.3.0 
-psycopg2==2.9.10 
-sqlparse==0.5.3 
-tzdata==2025.2
+| Django==5.2.6 
+| django-admin-sortable2==2.2.8 
+| pillow==11.3.0 
+| psycopg2==2.9.10 
+| sqlparse==0.5.3 
+| tzdata==2025.2
 
 
 
@@ -77,12 +77,13 @@ DATABASES = {
     }
 }
 
+---
 
 ⚙️ Installation & Setup Guide
 
 1️⃣ Clone the repository
 
-     git clone https://github.com/yourusername/feast-fast-food.git  
+     git clone https://github.com/dinesh2442/Feast-Fast-Food 
      cd feast-fast-food
 
 
@@ -112,12 +113,13 @@ DATABASES = {
      python manage.py runserver
 
 7️⃣ Access the site
+
 🌐 Frontend: http://127.0.0.1:8000/
 🔑 Admin Panel: http://127.0.0.1:8000/admin/
 
+---
 
-
-📱 Responsive Design
+## 📱 Responsive Design
 Feast Fast Food is fully responsive and mobile-friendly, built using:
 
 ⚡ Bootstrap
@@ -126,23 +128,23 @@ Feast Fast Food is fully responsive and mobile-friendly, built using:
 
 📲 Works seamlessly on mobile, tablet, and desktop
 
+---
 
-
-💌 Email Notifications
+## 💌 Email Notifications
 All user-related emails (registration, password reset, order updates) are sent using Django Signals and the configured email backend in settings.py.
 
+---
 
-
-📬 Future Enhancements
+## 📬 Future Enhancements
 💳 Online Payment Gateway Integration
 
 🗺️ Real-time Delivery Tracking
 
 ⭐ Customer Reviews and Ratings
 
+---
 
-
-👨‍💻 Author
+## 👨‍💻 Author
 Developed by: **DINESH T** 💡 Tools used: PyCharm, PostgreSQL, Django, Bootstrap, HTML/CSS/JS 
 
 🔗 Connect with me:
@@ -153,14 +155,16 @@ Developed by: **DINESH T** 💡 Tools used: PyCharm, PostgreSQL, Django, Bootstr
 
 🔗 [Instagram](https://www.instagram.com/silent_killer_2442/#)
 
+---
 
-
-🏁 License
+## 🏁 License
 This project is licensed under the MIT License. You are free to use, modify, and distribute this code with proper attribution.
 
 © 2025 Dinesh T — All rights reserved. Please retain the footer credit and author links when deploying or sharing.
 
-✨ Tagline
+---
+
+## ✨ Tagline
 “Feast Fast Food — Order Fast, Eat Fresh!” 🍕🍟
 
 
