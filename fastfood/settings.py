@@ -86,11 +86,11 @@ WSGI_APPLICATION = 'fastfood.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fastfoodapp',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': 'your_database',        # ← Change this to your new DB name
+        'USER': 'your_database_user',   # ← Your DB username
+        'PASSWORD': 'your_password',    # ← Your DB password
+        'HOST': 'localhost',            # or your DB server IP
+        'PORT': '5432',                 # default for PostgreSQL
     }
 }
 
@@ -145,6 +145,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'feastfastfood@gmail.com'
-EMAIL_HOST_PASSWORD = 'vsawziqutgywkllz'  # your Gmail App Password (no spaces)
-DEFAULT_FROM_EMAIL = "Feast Fast Food <feastfastfood@gmail.com>"
+EMAIL_HOST_USER = 'your_email@gmail.com'
+EMAIL_HOST_PASSWORD = 'your_email_password'  # your Gmail App Password (no spaces)
+DEFAULT_FROM_EMAIL = "Feast Fast Food <your_email@gmail.com>"
