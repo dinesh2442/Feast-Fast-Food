@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Order Delivered</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color:#f8f9fa; color:#333;">
+<div style="max-width:600px; margin:auto; background:#fff; padding:20px; border-radius:8px;">
+    <h2 style="color:#ffc107;">Order Delivered! 🚚</h2>
+    <p>Hi {{ user.first_name }}, your order <strong>#{{ order.id }}</strong> has been successfully delivered.</p>
+    <p>We hope you enjoy your meal! Thank you for ordering with <strong>Feast Fast Food</strong>.</p>
+    <a href="http://127.0.0.1:8000/"
+       style="display:inline-block; padding:10px 20px; background:#ffc107; color:#fff; text-decoration:none; border-radius:5px;">Order
+        Again</a>
+</div>
+</body>
+</html>

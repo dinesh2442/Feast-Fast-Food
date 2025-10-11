@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="{% static 'resources/logo.png' %}" type="image/png">
+    <title>Login</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .video-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+
+    .heading {
+        font-size: 50px;
+        font-style: italic;
+        text-align: center;
+        margin-top: 50px;
+        color: #ffc107;
+    }
+
+    .div {
+        display: flex;
+        flex-direction: column;
+        width: 450px;
+        /* Your preferred default */
+        max-width: 90vw;
+        /* prevents overflow on very small screens */
+        height: auto;
+        padding: 20px;
+        margin: 50px auto;
+        font-size: 16px;
+        text-align: center;
+        border: 3px solid #ffc107;
+        border-radius: 30px;
+        background-color: transparent;
+        color: #ffc107;
+
+    }
+
+    .up {
+        width: 280px;
+        height: 30px;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        border-radius: 25px;
+        border: 2px solid #ffc107;
+        background-color: transparent;
+        outline: none;
+        font-size: 30px;
+        color: #ffc107;
+        font-weight: bold;
+
+    }
+
+    .up::placeholder {
+        color: #ffc107;
+        font-size: 20px;
+        opacity: 0.5;
+        font-weight: bold;
+        background-color: transparent;
+    }
+
+    .up:focus {
+        color: #ffc107;
+        font-size: 30px;
+    }
+
+
+    /* used to transparent background color input box when content autofill or suggest paste */
+    .up:-webkit-autofill,
+    .up:-webkit-autofill:hover,
+    .up:-webkit-autofill:focus,
+    .up:-webkit-autofill:active {
+        -webkit-text-fill-color: #ffc107 !important;
+        transition: background-color 5000s ease-in-out 0s;
+        box-shadow: 0 0 0px 1000px transparent inset !important;
+        background-color: transparent !important;
+        font-size: 30px !important;
+        font-weight: bold;
+    }
+
+
+    button {
+        padding: 20px;
+        width: 150px;
+        border-radius: 25px;
+        font-weight: bolder;
+        font-size: 20px;
+        color: white;
+        background-color: #ffc107;
+        margin: 10px;
+        margin-left: 30px;
+    }
+
+    button:active {
+        background-color: black;
+        padding: 25px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    i {
+        color: #ffc107;
+    }
+
+    /* For medium screens (800px to 1000px) */
+    @media screen and (min-width: 800px) and (max-width: 1000px) {
+        .div {
+            width: 500px;
+            font-size: 16px;
+            border-radius: 40px;
+        }
+
+        .heading {
+            font-size: 28px;
+        }
+    }
+
+    /* For small screens (up to 800px) */
+    @media screen and (max-width: 800px) {
+        .div {
+            width: 60%;
+            font-size: 14px;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 24px;
+        }
+    }
+
+    /* Responsive tweaks for narrow screens */
+    @media screen and (max-width: 500px) {
+        .div {
+            width: 90%;
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .heading {
+            font-size: 22px;
+            text-align: center;
+        }
+    }
+</style>
+<body>
+<!-- Background Video -->
+<video autoplay muted loop class="video-bg">
+    <source src="{% static 'resources/bg-video.mp4' %}" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+<div class="body">
+
+    <h1 class="heading">Feast Fast Food <sup>&reg;</sup></h1>
+
+    <div class="div">
+        {% for message in messages %}
+            <h1 style="color: {% if "success" in message.tags %}green
+            {% elif "error" in message.tags %}red
+            {% elif "info" in message.tags %}blue
+            {% else %}black
+            {% endif %}">{{ message }}</h1>
+        {% endfor %}
+
+        <table>
+            <h1><i style="margin-right: 10px; color:#ffc107;" class="fas fa-user"></i>LOGIN</h1>
+
+            <tr>
+                <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    <td><i class="fas fa-user fa-2x"></i> <input class="up" type="text" id="username"
+                                                                 name="username"
+                                                                 placeholder="username"
+                                                                 required></td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-lock fa-2x"></i><input class="up" type="password" id="password"
+                                                            name="password"
+                                                            placeholder="password" required></td>
+            </tr>
+
+            <tr>
+                <td><label style="margin-left: 20px;"><input type="checkbox">Remember Me</label> <a
+                        href="{% url 'password_reset' %}"
+                        style="padding-left: 30px; color:blue;">Forgot
+                    password?</a></td>
+
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" name="submit" value="login">LOGIN</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="color: #ffc107; font-weight: bold; font-size:20px;">Don't hava an account? <a
+                        href="{% url 'signup' %}">Signup</a></td>
+
+                </form>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+
+</body>
+
+</html>

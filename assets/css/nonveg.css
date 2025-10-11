@@ -1,0 +1,148 @@
+/* Reset and base styles */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+}
+
+/* Section titles */
+.title {
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+    text-shadow: 5px 5px 5px #5C4033;
+    letter-spacing: 5px;
+}
+
+/* Product container */
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 15px;
+    justify-content: space-evenly;
+}
+
+/* Individual product box */
+.box {
+    border: none;
+    width: 250px;
+    height: 360px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+    transition: 1s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: -5px 5px 5px black;
+    border: none;
+}
+
+
+img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+
+/*footer section css*/
+.footer {
+    background-color: #343a40; /* Dark black */
+    color: #fff; /* Default white text */
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+
+}
+
+.footer h3, .footer h4 {
+    color: gold;
+    margin-bottom: 15px;
+    letter-spacing: 2px
+}
+
+.footer p {
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1 1 250px;
+    border: 2px solid gold;
+    box-shadow: 0 0 10px gold;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.footer-form input,
+.footer-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-form button {
+    background-color: gold;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-form button:hover {
+    background-color: #ffd700;
+}
+
+.footer-social a {
+    margin-right: 10px;
+    color: white;
+    transition: transform 0.3s ease;
+    letter-spacing: 2px
+}
+
+.footer-social a:hover {
+    transform: scale(1.2);
+    color: gold;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        flex: 1 1 100%;
+    }
+}
+
+
+

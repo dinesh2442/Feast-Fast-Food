@@ -1,0 +1,58 @@
+/* Reset and base styles */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+}
+
+/* Section titles */
+.title {
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+    text-shadow: 5px 5px 5px #5C4033;
+    letter-spacing: 5px;
+}
+
+/* Product container */
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 15px;
+    justify-content: space-evenly;
+}
+
+/* Individual product box */
+.box {
+    border: none;
+    width: 250px;
+    height: 360px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+    transition: 1s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: -5px 5px 5px black;
+    border: none;
+}
+
+
+img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+
+
+
+
+
+

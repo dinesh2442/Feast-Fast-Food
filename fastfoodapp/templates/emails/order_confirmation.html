@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color:#f8f9fa; color:#333;">
+<div style="max-width:600px; margin:auto; background:#fff; padding:20px; border-radius:8px;">
+    <h2 style="color:#28a745;">Order Confirmed! ✅</h2>
+    <p>Hi {{ user.first_name }}, your order <strong>#{{ order.id }}</strong> has been successfully placed.</p>
+
+    <h3>Order Details:</h3>
+    <ul>
+        {% for item in items %}
+            <li>{{ item.product_name }} x {{ item.quantity }} — ₹{{ item.price|floatformat:2 }}</li>
+        {% endfor %}
+    </ul>
+    <p><strong>Total: ₹{{ order.total|floatformat:2 }}</strong></p>
+
+    <p>We'll notify you once your order is ready. 🍕🍔🍟</p>
+    <a href="http://127.0.0.1:8000/my-orders/"
+       style="display:inline-block; padding:10px 20px; background:#28a745; color:#fff; text-decoration:none; border-radius:5px;">View
+        My Orders</a>
+</div>
+</body>
+</html>

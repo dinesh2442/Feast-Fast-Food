@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.heading {
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 50px;
+    color: #ffc107;
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    /* Your preferred default */
+    max-width: 90vw;
+    /* prevents overflow on very small screens */
+    height: auto;
+    padding: 20px;
+    margin: 50px auto;
+    font-size: 16px;
+    text-align: center;
+    border: 3px solid #ffc107;
+    border-radius: 30px;
+    background-color: transparent;
+    color:#ffc107;
+
+}
+
+.up {
+    width: 280px;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 25px;
+    border: 2px solid #ffc107;
+    background-color: transparent;
+    outline: none;
+    font-size: 30px;
+    color:#ffc107;
+
+}
+
+.up::placeholder {
+    color: #ffc107;
+    font-size: 20px;
+    opacity: 0.5;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+ /* used to transparent background color input box when content autofill or suggest paste */
+    .up:-webkit-autofill,
+    .up:-webkit-autofill:hover,
+    .up:-webkit-autofill:focus {
+        background-color: transparent !important;
+        color: #ffc107 !important;
+        box-shadow: 0 0 0px 1000px transparent inset;
+        /*forces transparency */
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+
+button {
+    padding: 20px;
+    width: 150px;
+    border-radius: 25px;
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+    background-color: #ffc107;
+    margin: 10px;
+    margin-left: 30px;
+}
+
+button:active {
+    background-color: black;
+    padding: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    color: #5C4033;
+}
+
+/* For medium screens (800px to 1000px) */
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    .div {
+        width: 500px;
+        font-size: 16px;
+        border-radius: 40px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+}
+
+/* For small screens (up to 800px) */
+@media screen and (max-width: 800px) {
+    .div {
+        width: 60%;
+        font-size: 14px;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 24px;
+    }
+}
+
+/* Responsive tweaks for narrow screens */
+@media screen and (max-width: 500px) {
+    .div {
+        width: 90%;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .heading {
+        font-size: 22px;
+        text-align: center;
+    }
+}
