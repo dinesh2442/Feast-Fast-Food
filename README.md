@@ -65,17 +65,20 @@ asgiref==3.9.1
 2. Create a new database:
    ```sql
    CREATE DATABASE fastfoodapp;
+   
 Update your settings.py with PostgreSQL credentials:
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fastfoodapp',
-        'USER': 'your_postgres_username',
-        'PASSWORD': 'your_postgres_password',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
+        
+        DATABASES = {
+          'default': {
+              'ENGINE': 'django.db.backends.postgresql',
+              'NAME': 'fastfoodapp',
+              'USER': 'your_postgres_username',
+              'PASSWORD': 'your_postgres_password',
+              'HOST': 'localhost',
+              'PORT': '5432',
+           }
+        }
+
 
 ---
 
@@ -115,6 +118,7 @@ DATABASES = {
 7️⃣ Access the site
 
 🌐 Frontend: http://127.0.0.1:8000/
+
 🔑 Admin Panel: http://127.0.0.1:8000/admin/
 
 ---
@@ -169,7 +173,6 @@ This project is licensed under the MIT License. You are free to use, modify, and
 
 
 
----
 
 
 
