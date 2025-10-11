@@ -81,30 +81,40 @@ DATABASES = {
 ⚙️ Installation & Setup Guide
 
 1️⃣ Clone the repository
-git clone https://github.com/yourusername/feast-fast-food.git  
-cd feast-fast-food
+
+     git clone https://github.com/yourusername/feast-fast-food.git  
+     cd feast-fast-food
+
 
 2️⃣ Create & activate a virtual environment
-python -m venv venv  
-venv\Scripts\activate  # Windows  
-source venv/bin/activate  # macOS/Linux
+
+     python -m venv venv  
+     venv\Scripts\activate  # Windows  
+     source venv/bin/activate  # macOS/Linux
+
 
 3️⃣ Install dependencies
-pip install -r requirements.txt
+
+     pip install -r requirements.txt
 
 4️⃣ Apply migrations
-python manage.py makemigrations  
-python manage.py migrate
+
+     python manage.py makemigrations  
+     python manage.py migrate
+
 
 5️⃣ Create a superuser
-python manage.py createsuperuser
+
+     python manage.py createsuperuser
 
 6️⃣ Run the server
-python manage.py runserver
+
+     python manage.py runserver
 
 7️⃣ Access the site
 🌐 Frontend: http://127.0.0.1:8000/
 🔑 Admin Panel: http://127.0.0.1:8000/admin/
+
 
 
 📱 Responsive Design
@@ -117,8 +127,10 @@ Feast Fast Food is fully responsive and mobile-friendly, built using:
 📲 Works seamlessly on mobile, tablet, and desktop
 
 
+
 💌 Email Notifications
 All user-related emails (registration, password reset, order updates) are sent using Django Signals and the configured email backend in settings.py.
+
 
 
 📬 Future Enhancements
@@ -129,8 +141,9 @@ All user-related emails (registration, password reset, order updates) are sent u
 ⭐ Customer Reviews and Ratings
 
 
+
 👨‍💻 Author
-Developed by: DINESH T 💡 Tools used: PyCharm, PostgreSQL, Django, Bootstrap, HTML/CSS/JS 
+Developed by: **DINESH T** 💡 Tools used: PyCharm, PostgreSQL, Django, Bootstrap, HTML/CSS/JS 
 
 🔗 Connect with me:
 
@@ -154,6 +167,5 @@ This project is licensed under the MIT License. You are free to use, modify, and
 
 ---
 
-Let me know if you'd like this formatted for a PDF or want help creating the actual `LICENSE` file with your name and year.
 
 
