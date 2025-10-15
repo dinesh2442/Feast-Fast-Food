@@ -52,7 +52,7 @@ def signup(request):
                 print("User created")
 
                 # ✅ Send welcome email
-             #   send_welcome_email(user)
+                send_welcome_email(user)
 
                 messages.success(request, 'Registration successful! Check your email for a welcome message.')
                 return redirect('login')
